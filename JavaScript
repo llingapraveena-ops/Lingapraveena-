@@ -1,0 +1,10 @@
+// Add scroll animation effect
+window.addEventListener("scroll", () => {
+  const sections = document.querySelectorAll(".section");
+  sections.forEach(sec => {
+    const secPos = sec.getBoundingClientRect().top;
+    if (secPos < window.innerHeight - 100) {
+      sec.classList.add("visible");
+    }
+  });
+});
